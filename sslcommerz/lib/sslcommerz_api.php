@@ -143,6 +143,6 @@ class SslcommerzApi
     {
         $result = $this->apiRequest('/validator/api/merchantTransIDvalidationAPI.php', ['tran_id' => $tran_id]);
 
-        return (isset($result->element[0]) ? $result->element[0] : $result);
+        return isset($result->element[0]) ? $result->element[0] : $result;
     }
 }

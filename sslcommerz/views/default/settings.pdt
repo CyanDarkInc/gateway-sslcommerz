@@ -1,0 +1,21 @@
+<ul>
+	<li>
+		<?php
+            $this->Form->label($this->_('Sslcommerz.store_id', true), 'store_id');
+            $this->Form->fieldText('store_id', $this->Html->ifSet($meta['store_id']), ['id'=>'store_id']);
+        ?>
+	</li>
+	<li>
+		<?php
+            $this->Form->label($this->_('Sslcommerz.store_password', true), 'store_password');
+            $this->Form->fieldText('store_password', $this->Html->ifSet($meta['store_password']), ['id'=>'store_password']);
+        ?>
+	</li>
+    <li>
+        <?php
+            $this->Form->fieldCheckbox('dev_mode', 'true', ($this->Html->ifSet($meta['dev_mode'], 'false') == 'true'), ['id'=>'dev_mode']);
+            $this->Form->label($this->_('Sslcommerz.dev_mode', true), 'dev_mode', ['class'=>'inline']);
+        ?>
+        <span class="tooltip"><?php $this->_('AppController.tooltip.text'); ?><div><?php $this->_('Sslcommerz.dev_mode_note'); ?></div></span>
+    </li>
+</ul>
